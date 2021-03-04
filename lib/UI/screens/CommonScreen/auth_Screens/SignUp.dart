@@ -75,8 +75,8 @@ class _SignupFormState extends State<SignupForm> {
                               ));
                         });
                       } else {
-                        ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                            content: Text('Your password is not matching')));
+                        //ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                        //    content: Text('Your password is not matching')));
                       }
                     }
                   }),
