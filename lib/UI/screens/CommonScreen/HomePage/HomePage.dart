@@ -89,7 +89,6 @@ class HomePage extends StatelessWidget {
           onTap: (index) {
             context.read<TabsIndexState>().selectedIndex = index;
           },
-          automaticIndicatorColorAdjustment: true,
           indicatorColor: Theme.of(context).primaryColor,
           labelColor: Colors.white,
           unselectedLabelColor: Colors.grey,
