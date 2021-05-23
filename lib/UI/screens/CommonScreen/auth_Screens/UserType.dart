@@ -27,31 +27,21 @@ class _UserTypeCheckState extends State<UserTypeCheck> {
         }
         if (_profile.userData != null) {
           print("userData !=null");
-          if (_profile.userData.isShipper) {
-            if (_profile.isNewUser != null) {
-              context
-                  .read<MarketViewModel>()
-                  .getMyLoads(_profile.userData.userId)
-                  .then((value) {
-                _profile.isNewUser = null;
-              });
-            }
-            return HomePage(
-              isServiceProvider: false,
-              userId: widget.userId,
-            );
-          }
+
           if (_profile.isNewUser != null) {
             context
                 .read<MarketViewModel>()
-                .getLoadsFromMarket()
-                .then((value) => _profile.isNewUser = null);
+                .getMyLoads(_profile.userData.userId)
+                .then((value) {
+              _profile.isNewUser = null;
+            });
           }
           return HomePage(
-            isServiceProvider: true,
+            isServiceProvider: false,
             userId: widget.userId,
           );
         }
+
         print("userData ==null");
         return Scaffold(
           body: Center(

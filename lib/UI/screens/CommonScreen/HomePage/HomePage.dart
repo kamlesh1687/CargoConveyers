@@ -115,7 +115,7 @@ class HomePage extends StatelessWidget {
                 : MyLoads(
                     userId: userId,
                   ),
-            isServiceProvider ? LoadMarketCompany() : LorryMarketUser()
+            !isServiceProvider ? LoadMarketCompany() : LorryMarketUser()
           ],
         ),
       ),

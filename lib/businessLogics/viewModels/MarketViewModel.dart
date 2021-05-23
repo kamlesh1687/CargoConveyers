@@ -1,13 +1,13 @@
 import 'package:cargoconveyers/businessLogics/models/LoadInputModel.dart';
 import 'package:cargoconveyers/businessLogics/models/LoadModel.dart';
+import 'package:cargoconveyers/businessLogics/viewModels/AppState.dart';
 
 import 'package:cargoconveyers/services/firebaseServices.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/cupertino.dart';
 
-class MarketViewModel extends ChangeNotifier {
+class MarketViewModel extends AppState {
   MarketViewModel() {
-    print('value');
+    getLoadsFromMarket();
   }
   deleteUserLoadData() {
     loadFromMarketList = null;

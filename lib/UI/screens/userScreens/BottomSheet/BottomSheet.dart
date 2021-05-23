@@ -177,10 +177,7 @@ class _BottomSheetInputState extends State<BottomSheetInput> {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: MediaQuery.of(context).viewInsets,
-      child: index == 0 ? firstScreen() : secondScreen(),
-    );
+    return index == 0 ? firstScreen() : secondScreen();
   }
 
   Widget secondScreen() {
